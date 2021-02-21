@@ -21,6 +21,6 @@ jobs:
             version: '5.15.0'
             host: 'windows'
             target: 'desktop'
-            arch: 'win64_msvc2017_64'
+            setup-python: 'false'
       - name: Build Windows binaries
         run: ./scripts/win-wrapper.bat
