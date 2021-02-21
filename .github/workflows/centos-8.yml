@@ -17,5 +17,5 @@ jobs:
           persist-credentials: false
       - name: Build docker images
         run: docker build -t local --build-arg BUILD_THREADS=2 < Docker/CentOS/Dockerfile
-        with:
+        env:
           GITHUB_CI_TOKEN: ${{ secrets.GITHUB_TOKEN }}
