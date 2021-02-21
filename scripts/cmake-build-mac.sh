@@ -33,7 +33,7 @@ MAC_QT_LIBRARYDIR=${MAC_QT_DIR}/lib
 
 ##### ### # Boost # ### #####################################################
 # Trying to find required Homebrew Boost libs
-BOOST_VERSION_MAC=1.73.0
+BOOST_VERSION_MAC=1.74.0
 BOOST_INCLUDEDIR=/usr/local/Cellar/boost/${BOOST_VERSION_MAC}/include
 BOOST_LIBRARYDIR=/usr/local/Cellar/boost/${BOOST_VERSION_MAC}/lib
 BOOST_REQUIRED_LIBS='chrono filesystem iostreams program_options system thread regex date_time atomic'
