@@ -19,8 +19,6 @@ jobs:
         uses: jurplel/install-qt-action@v2
         with:
             version: '5.12.9'
-            host: 'windows'
-            target: 'desktop'
             setup-python: 'false'
             modules: 'qtwebengine'
       - name: Install vcpkg and packages with cache
