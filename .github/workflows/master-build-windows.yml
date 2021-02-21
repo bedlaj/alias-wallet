@@ -22,6 +22,7 @@ jobs:
             host: 'windows'
             target: 'desktop'
             setup-python: 'false'
+            modules: 'qtwebengine'
       - name: Install vcpkg and packages with cache
         uses: lukka/run-vcpkg@v6
         with:
