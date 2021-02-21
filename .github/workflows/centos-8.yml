@@ -1,0 +1,21 @@
+name: Redis Service Example
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  container-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Build docker images
+        run: docker build -t local --build-arg BUILD_THREADS=2 < Docker/CentOS/Dockerfile
+        with:
+          GITHUB_CI_TOKEN: ${{ secrets.GITHUB_TOKEN }}

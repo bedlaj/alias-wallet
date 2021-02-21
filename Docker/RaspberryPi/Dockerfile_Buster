@@ -24,11 +24,11 @@ RUN cd /alias-wallet \
 FROM aliascash/github-uploader:latest
 MAINTAINER HLXEasy <hlxeasy@gmail.com>
 
-ARG GITHUB_CI_TOKEN=1234567
-ARG ALIAS_RELEASE=latest
-ARG ALIAS_REPOSITORY=alias-wallet
-ARG GIT_COMMIT=unknown
-ARG REPLACE_EXISTING_ARCHIVE=''
+ENV GITHUB_CI_TOKEN=1234567
+ENV ALIAS_RELEASE=latest
+ENV ALIAS_REPOSITORY=alias-wallet
+ENV GIT_COMMIT=unknown
+ENV REPLACE_EXISTING_ARCHIVE=''
 #ENV GITHUB_CI_TOKEN=${GITHUB_CI_TOKEN}
 ENV ARCHIVE=Alias-${ALIAS_RELEASE}-${GIT_COMMIT}-RaspberryPi-Buster-aarch64.tgz
 ENV CHKSUM_FILE=Checksum-Alias-RaspberryPi-Buster-aarch64.txt
