@@ -23,7 +23,7 @@ jobs:
             target: 'desktop'
             setup-python: 'false'
       - name: debug
-        run: tree
+        run: tree /F /A
       - name: Build Windows binaries
 #        env:
 #          QTDIR: {{env.Qt5_Dir}}
