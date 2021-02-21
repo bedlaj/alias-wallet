@@ -18,7 +18,7 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v2
         with:
-            version: '5.15.0'
+            version: '5.12.9'
             host: 'windows'
             target: 'desktop'
             setup-python: 'false'
@@ -29,5 +29,5 @@ jobs:
         env:
           QTDIR: ${{ env.Qt5_Dir }}
           VSDIR: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise'
-          CMAKEDIR: 'C:\"Program Files"\CMake\bin'
+          CMAKEDIR: 'C:\Program Files\CMake\bin'
           VCPKGDIR: 'C:\vcpkg'
