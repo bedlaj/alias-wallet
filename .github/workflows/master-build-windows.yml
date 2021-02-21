@@ -26,6 +26,7 @@ jobs:
         uses: lukka/run-vcpkg@v6
         with:
           vcpkgArguments: 'berkeleydb boost leveldb openssl'
+          vcpkgGitCommitId: 8e76503a769e153dad8f4e7b2c95a152bb35edaa
       - name: Build Windows binaries
         run: ./scripts/cmake-build-win.bat
         env:
