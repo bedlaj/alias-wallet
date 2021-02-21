@@ -26,7 +26,7 @@ set SRC_DIR=%cd%
 set BUILD_DIR=%cd%\build
 
 :: "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"
-call "%VSDIR%\Community\VC\Auxiliary\Build\vcvars64.bat"
+call "%VSDIR%\VC\Auxiliary\Build\vcvars64.bat"
 cd
 cd %SRC_DIR%
 dir

@@ -22,8 +22,8 @@ jobs:
             host: 'windows'
             target: 'desktop'
             setup-python: 'false'
-      - name: debug
-        run: where.exe vcpkg
+      - name: Install dependencies
+        run: vcpkg.exe install berkeleydb boost leveldb openssl
       - name: Build Windows binaries
         run: ./scripts/cmake-build-win.bat
         env:
