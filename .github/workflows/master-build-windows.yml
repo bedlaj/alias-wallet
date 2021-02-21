@@ -26,11 +26,11 @@ jobs:
         uses: lukka/run-vcpkg@v6
         with:
           vcpkgArguments: 'berkeleydb boost leveldb openssl'
-          vcpkgGitCommitId: 8e76503a769e153dad8f4e7b2c95a152bb35edaa
+          vcpkgGitCommitId: a037d826492039db9d58af47a1e1248037d15f40
       - name: Build Windows binaries
         run: ./scripts/cmake-build-win.bat
         env:
           QTDIR: ${{ env.Qt5_Dir }}
           VSDIR: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise'
           CMAKEDIR: 'C:\Program Files\CMake\bin'
-          VCPKGDIR: 'C:\vcpkg'
+          VCPKGDIR: ${{ github.workspace }}/vcpkg
