@@ -28,6 +28,6 @@ jobs:
         run: ./scripts/cmake-build-win.bat
         env:
           QTDIR: ${{ env.Qt5_Dir }}
-          VSDIR: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise'
-          CMAKEDIR: 'C:\Program Files\CMake\bin'
+          VSDIR: 'C:\"Program Files (x86)"\Microsoft Visual Studio\2019\Enterprise'
+          CMAKEDIR: 'C:\"Program Files"\CMake\bin'
           VCPKGDIR: 'C:\vcpkg'
