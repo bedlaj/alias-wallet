@@ -9,13 +9,16 @@ on:
       - master
 
 jobs:
-  container-job:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        distro: [ CentOS/Dockerfile, Debian/Dockerfile_Buster, Debian/Dockerfile_Stretch, Fedora/Dockerfile, OpenSUSE/Dockerfile, RaspberryPi/Dockerfile_Buster, Ubuntu/Dockerfile_18_04, Ubuntu/Dockerfile_20_04 ]
     steps:
       - uses: actions/checkout@v2
         with:
           persist-credentials: false
       - name: Build docker images
-        run: docker build -t local -f Docker/CentOS/Dockerfile .
+        run: docker build -t local -f Docker/${{ matrix.distro }}_noUpload .
         env:
           GITHUB_CI_TOKEN: ${{ secrets.GITHUB_TOKEN }}
