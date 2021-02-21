@@ -23,7 +23,7 @@ jobs:
             target: 'desktop'
             setup-python: 'false'
       - name: debug
-        run: where cmake
+        run: where.exe cmake
       - name: Build Windows binaries
         run: ./scripts/cmake-build-win.bat
         env:
