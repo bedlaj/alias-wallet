@@ -22,6 +22,6 @@ jobs:
             host: 'windows'
             target: 'desktop'
             arch: 'win64_msvc2017_64'
-            dir: 'C:/'
+            dir: 'C:\'
       - name: Build Windows binaries
         run: ./scripts/win-wrapper.bat
