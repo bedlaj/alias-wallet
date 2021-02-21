@@ -23,7 +23,12 @@ _init
 
 ##### ### # Global definitions # ### ########################################
 ##### ### # Mac Qt # ### ####################################################
-MAC_QT_DIR=${QT_INSTALLATION_PATH}/${QT_VERSION_MAC}/clang_64
+if [[ -z "${MAC_QT_DIR}" ]]; then
+  MAC_QT_DIR=${QT_INSTALLATION_PATH}/${QT_VERSION_MAC}/clang_64
+else
+  MAC_QT_DIR="${MAC_QT_DIR}"
+fi
+
 MAC_QT_LIBRARYDIR=${MAC_QT_DIR}/lib
 
 ##### ### # Boost # ### #####################################################

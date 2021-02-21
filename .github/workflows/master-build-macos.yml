@@ -18,7 +18,7 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v2
         with:
-            version: '5.12.9'
+            version: '5.12.10'
             setup-python: 'false'
             modules: 'qtwebengine'
       - name: Install dependencies
@@ -28,3 +28,5 @@ jobs:
           brew install berkeley-db@4
       - name: Build MacOS binaries
         run: ./scripts/cmake-build-mac.sh -g
+        env:
+          MAC_QT_DIR: ${{Qt5_DIR}}
