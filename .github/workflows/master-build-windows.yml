@@ -29,5 +29,5 @@ jobs:
         env:
           QTDIR: ${{ env.Qt5_Dir }}
           VSDIR: 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise'
-          CMAKEDIR: ''
+          CMAKEDIR: 'C:\Program Files\CMake\bin'
           VCPKGDIR: ${{ env.PKG_CONFIG_PATH }}
