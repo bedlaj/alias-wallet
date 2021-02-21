@@ -3,7 +3,7 @@ name: Build x64
 on:
   push:
     branches:
-      - master
+      - TODODisabled
   pull_request:
     branches:
       - master

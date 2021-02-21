@@ -3,7 +3,7 @@ name: Build ARM
 on:
   push:
     branches:
-      - master
+      - TODODisabled
   pull_request:
     branches:
       - master
