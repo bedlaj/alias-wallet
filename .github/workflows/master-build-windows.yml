@@ -1,0 +1,27 @@
+name: Build Windows
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v2
+        with:
+            version: '5.15.0'
+            host: 'windows'
+            target: 'desktop'
+            arch: 'win64_msvc2017_64'
+            dir: 'C:/'
+      - name: Build Windows binaries
+        run: ./scripts/win-wrapper.bat

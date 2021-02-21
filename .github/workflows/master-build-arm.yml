@@ -1,4 +1,4 @@
-name: Build Linux
+name: Build ARM
 
 on:
   push:
@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # TODO Raspbian
         distro: [ RaspberryPi/Dockerfile_Buster]
     steps:
       - uses: actions/checkout@v2
