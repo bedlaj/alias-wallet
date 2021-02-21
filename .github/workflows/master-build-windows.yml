@@ -22,5 +22,12 @@ jobs:
             host: 'windows'
             target: 'desktop'
             setup-python: 'false'
+      - name: debug
+        run: tree
       - name: Build Windows binaries
-        run: ./scripts/win-wrapper.bat
+        env:
+          QTDIR: {{env.Qt5_Dir}}
+          VSDIR: ""
+          CMAKEDIR: ""
+          VCPKGDIR: {{env.PKG_CONFIG_PATH}}
+        run: ./scripts/cmake-build-win.bat
