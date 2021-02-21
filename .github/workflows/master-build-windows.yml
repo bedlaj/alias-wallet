@@ -25,9 +25,9 @@ jobs:
       - name: debug
         run: tree
       - name: Build Windows binaries
-        env:
-          QTDIR: {{env.Qt5_Dir}}
-          VSDIR: ""
-          CMAKEDIR: ""
-          VCPKGDIR: {{env.PKG_CONFIG_PATH}}
+#        env:
+#          QTDIR: {{env.Qt5_Dir}}
+#          VSDIR: ""
+#          CMAKEDIR: ""
+#          VCPKGDIR: {{env.PKG_CONFIG_PATH}}
         run: ./scripts/cmake-build-win.bat
