@@ -30,4 +30,5 @@ jobs:
       - name: Build MacOS binaries
         run: ./scripts/cmake-build-mac.sh -g
         env:
-          QTDIR: ${{ env.Qt5_DIR }}
+          MAC_QT_DIR: ${{ env.Qt5_DIR }}
+          BOOST_VERSION_MAC: 1.74.0
